@@ -7,10 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {},
       backgroundImage: {
         "coffee-gradient":
-          "linear-gradient(to top, #6E2E2F   , #894900 , #A46000)",
+          "linear-gradient(to top, #6E2E2F   , #894900 , #A16000)",
+      },
+      keyframes: {
+        riseUp: {
+          "0%": { transform: "translateY(100%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        riseUp: "riseUp 1s ease-out forwards",
       },
     },
   },
