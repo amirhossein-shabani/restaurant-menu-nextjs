@@ -5,25 +5,25 @@ import Link from "next/link";
 
 function Page() {
   return (
-    <main className="pt-20 md:pt-32 relative flex flex-col  scroll-smooth ">
-      <div className="max-w-6xl w-full mx-auto text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl pt-10 font-bold text-right flex justify-start px-2 lg:px-4  ">
+    <main className="relative flex flex-col sm:pt-20 md:pt-32 scroll-smooth ">
+      <div className="flex justify-start w-full max-w-6xl px-2 mx-auto text-2xl font-bold text-right text-white md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4 ">
         <p className="">جایی که هر فنجان، تجربه‌ای متفاوت است</p>
       </div>
-      <div className="  flex items-center justify-center ">
-        <div className=" relative max-w-lg md:max-w-xl transition-transform duration-500 lg:hover:scale-110 ease-in-out z-30">
+      <div className="flex items-center justify-center ">
+        <div className="relative z-30 max-w-lg transition-transform duration-500 ease-in-out md:max-w-xl lg:hover:scale-110">
           <Image
             src={bg}
             alt="background picture"
             placeholder="empty"
             quality={100}
-            className="object-cover object-top  "
+            className="object-cover object-top "
           />
           <div
             className={`absolute flex items-center justify-center inset-0 top-52 lg:top-64 left-3 lg:left-4 text-3xl lg:text-3xl `}
           >
             <Link
               href="/menu"
-              className=" border-4 border-white bg-white/30  lg:bg-transparent text-white px-10 sm:px-14 lg:px-8 py-1 rounded-full lg:hover:text-gray-700 lg:hover:bg-white transition duration-200 lg:hover:outline-none font-medium "
+              className="px-10 py-1 font-medium text-white transition duration-200 border-4 border-white rounded-full bg-white/30 lg:bg-transparent sm:px-14 lg:px-8 lg:hover:text-gray-700 lg:hover:bg-white lg:hover:outline-none"
             >
               منوی کافه
             </Link>

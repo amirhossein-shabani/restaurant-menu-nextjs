@@ -1,12 +1,14 @@
 import Image from "next/image";
 import about from "@/public/img/about.jpg";
+import { FaInstagram, FaPhone, FaTelegram } from "react-icons/fa6";
+import { MdEmail, MdPhoneAndroid } from "react-icons/md";
 
 function Page() {
   return (
-    <div className="pt-40 max-w-6xl pb-10 mx-auto flex justify-center px-4 2xl:px-0">
-      <div className=" bg-yellow-300/20 pb-10 rounded-2xl md:rounded-none md:rounded-r-2xl text-white md:w-1/2 flex flex-col xl:gap-4 px-6 mx-3 md:mx-0  pt-4 flex-1 md:flex-none shadow-xl">
+    <div className="flex justify-center max-w-6xl px-4 pb-10 mx-auto sm:pt-40 2xl:px-0">
+      <div className="flex flex-col flex-1 px-6 pt-4 pb-10 mx-3 text-white shadow-xl bg-yellow-300/20 rounded-2xl lg:rounded-none lg:rounded-r-2xl lg:w-1/2 xl:gap-4 lg:mx-0 lg:flex-none">
         {/* Address  */}
-        <div className="flex flex-col gap-2 xl:gap-4 items-start-center py-4">
+        <div className="flex flex-col gap-2 py-4 xl:gap-4 items-start-center">
           <p className="text-lg font-semibold xl:text-3xl">آدرس ما :</p>
           <p className="xl:text-2xl">
             بلوار معلم ، میدان سرگل , جنب پارک کودک{" "}
@@ -14,22 +16,40 @@ function Page() {
         </div>
         {/* contact with admin */}
         <div
-          className="flex flex-col gap-2 py-4  bg-gray-300/30 px-3  rounded-xl xl:text-xl "
+          className="flex flex-col gap-2 px-3 py-4 bg-gray-300/30 rounded-xl xl:text-xl "
           dir="ltr"
         >
           <p className="px-2 " dir="rtl">
             {" "}
             راه های ارتباطی با ما :
           </p>
-          <a href="tel:+989368569768" className="hover:underline ">
-            +13 3332 000 00
-          </a>
-          <a href="tel:+989368569768" className="hover:underline ">
-            +98 936 856 9768
-          </a>
-          <a href="mailto:amseinn20@gmail.com" className="hover:underline ">
-            amseinn20@gmail.com
-          </a>
+          <div className="flex flex-row gap-2">
+            <span>
+              <FaPhone />
+            </span>
+            <a href="tel:+989368569768" className="hover:underline ">
+              +13 3332 000 00
+            </a>
+          </div>
+          <div className="flex flex-row gap-2">
+            <span>
+              <MdPhoneAndroid />
+            </span>
+
+            <a href="tel:+989368569768" className="hover:underline ">
+              +98 936 856 9768
+            </a>
+          </div>
+
+          <div className="flex flex-row gap-2">
+            <span>
+              <MdEmail />
+            </span>
+            <a href="mailto:amseinn20@gmail.com" className="hover:underline ">
+              amseinn20@gmail.com
+            </a>
+          </div>
+
           {/* instageram id : */}
           {/* <a
           href="mailto:amseinn20@gmail.com"
@@ -56,19 +76,46 @@ function Page() {
         style={{ border: 0 }}
         allowFullScreen=""
         loading="lazy"
-        className="rounded-xl mt-2 "
+        className="mt-2 rounded-xl "
       /> */}
 
+        {/* dsecription  */}
+        <div className="p-2 pt-5 text-xs leading-relaxed text-white whitespace-pre-line md:text-xl ">
+          {`کافه ما با هدف خلق فضایی آرام و دل‌پذیر برای علاقه‌مندان به قهوه تأسیس شد.
+ترکیب کیفیت، سادگی و حس خوب، فلسفه‌ی اصلی ماست.
+از انتخاب دانه‌های قهوه تا آماده‌سازی هر فنجان، همه‌چیز با دقت و عشق انجام می‌شود.
+
+ما باور داریم که کافه فقط جایی برای نوشیدن قهوه نیست؛ بلکه مکانی است برای گفتگو، الهام و لحظه‌ای رهایی از شلوغی روزمره.
+در این فضا تلاش کرده‌ایم تا گرمای صمیمیت را با عطر قهوه و موسیقی دل‌نشین درهم بیامیزیم.
+منوی ما با دقت و سلیقه طراحی شده تا پاسخ‌گوی هر سلیقه‌ای باشد — از قهوه‌های کلاسیک گرفته تا نوشیدنی‌ها و دسرهای خاص.
+
+هر بار که به ما سر می‌زنید، هدفمان این است که تجربه‌ای تازه و لذت‌بخش برایتان بسازیم؛ تجربه‌ای که مزه‌اش تا مدت‌ها در خاطر بماند.
+
+نظرات، پیشنهادها و نقدهای ارزشمندتان را نیز با خوشحالی از طریق راه‌های ارتباطی درج‌شده با ما در میان بگذارید — ما همیشه مشتاق شنیدن صدای شما هستیم.`}
+        </div>
+
         {/* social media  */}
+        <div className="flex justify-center gap-3 mt-8 lg:justify-end ">
+          <a href="https://www.instagram.com/oris.cafe/" target="_blank">
+            <span className="text-lg md:text-3xl">
+              <FaInstagram />
+            </span>
+          </a>
+          <a href="https://t.me/Mr_rahnama" target="_blank">
+            <span className="text-lg md:text-3xl">
+              <FaTelegram />
+            </span>
+          </a>
+        </div>
       </div>
 
       {/* picture section in About  */}
-      <div className="hidden sm:flex opacity-90 rounded-l-2xl shadow-xl">
+      <div className="hidden shadow-xl lg:flex opacity-90 rounded-l-2xl">
         <Image
           src={about}
           placeholder="blur"
           alt="about image"
-          className=" rounded-l-2xl  "
+          className=" rounded-l-2xl"
         ></Image>
       </div>
     </div>
