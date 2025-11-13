@@ -8,8 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "coffee-gradient":
-          "linear-gradient(to top, #6E2E2F   , #894900 , #A16000)",
+        "coffee-gradient": "linear-gradient(to top, #6E2E2F   ,  #E09400)",
       },
       keyframes: {
         riseUp: {
@@ -17,8 +16,9 @@ module.exports = {
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
+
       animation: {
-        riseUp: "riseUp 1s ease-out forwards",
+        riseUp: "riseUp 1.5s ease-out forwards ",
       },
     },
   },

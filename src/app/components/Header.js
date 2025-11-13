@@ -6,7 +6,7 @@ import NavigationMenu from "./NavigationMenu";
 
 function Header() {
   return (
-    <header className=" flex item-center text-3xl justify-center flex-row-reverse max-w-6xl mx-auto py-6 px-4 sm:justify-between md:text-4xl md:pt-8">
+    <header className="fixed inset-x-0 flex item-center text-3xl justify-center flex-row-reverse max-w-6xl mx-auto py-6 px-4 sm:justify-between md:text-4xl md:pt-8 z-40">
       <Logo />
       <Navigation />
       {/* hamburger menu */}

@@ -1,13 +1,16 @@
 import Image from "next/image";
 import bg from "@/public/img/bg.png";
-import coffeBean from "@/public/img/coffee-bean-3.png";
+import coffeBean from "@/public/img/coffee-bean.webp";
 import Link from "next/link";
 
 function Page() {
   return (
-    <main className="relative flex flex-col  scroll-smooth">
+    <main className="pt-20 md:pt-32 relative flex flex-col  scroll-smooth ">
+      <div className="max-w-6xl w-full mx-auto text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl pt-10 font-bold text-right flex justify-start px-2 lg:px-4  ">
+        <p className="">جایی که هر فنجان، تجربه‌ای متفاوت است</p>
+      </div>
       <div className="  flex items-center justify-center ">
-        <div className=" relative max-w-lg md:max-w-xl transition-transform duration-500 lg:hover:scale-110 ease-in-out  ">
+        <div className=" relative max-w-lg md:max-w-xl transition-transform duration-500 lg:hover:scale-110 ease-in-out z-30">
           <Image
             src={bg}
             alt="background picture"
@@ -27,10 +30,10 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="opacity-60 -z-10">
+      <div className="opacity-50 -z-10">
         <Image
           src={coffeBean}
-          className="object-bottom object-contain mx-auto  -mt-32 sm:-mt-40 md:-mt-80 lg:-mt-96 lg:max-w-6xl xl:-mt-[30rem] 2xl:-mt-[35rem] animate-riseUp animation-delay-200 ease-in-out  "
+          className="object-bottom object-contain mx-auto  -mt-32 sm:-mt-40 md:-mt-80 lg:-mt-96 lg:max-w-6xl xl:-mt-[30rem] 2xl:-mt-[35rem] animate-riseUp delay-500 ease-in-out  "
           alt="coffe-bean "
         />
       </div>
