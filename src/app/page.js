@@ -5,8 +5,8 @@ import Link from "next/link";
 
 function Page() {
   return (
-    <main className="relative flex flex-col sm:pt-20 md:pt-32 scroll-smooth ">
-      <div className="flex justify-start w-full max-w-6xl px-2 mx-auto text-2xl font-bold text-right text-white md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4 ">
+    <main className="relative flex flex-col items-center pt-8 sm:pt-40 scroll-smooth md:pt-32">
+      <div className="flex justify-start w-full px-2 pt-5 mx-auto text-2xl font-bold text-right text-white sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4 ">
         <p className="">جایی که هر فنجان، تجربه‌ای متفاوت است</p>
       </div>
       <div className="flex items-center justify-center ">
@@ -33,6 +33,7 @@ function Page() {
       <div className="opacity-50 -z-10">
         <Image
           src={coffeBean}
+          quality={80}
           className="object-bottom object-contain mx-auto  -mt-32 sm:-mt-40 md:-mt-80 lg:-mt-96 lg:max-w-6xl xl:-mt-[30rem] 2xl:-mt-[35rem] animate-riseUp delay-500 ease-in-out  "
           alt="coffe-bean "
         />

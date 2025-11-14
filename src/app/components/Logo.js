@@ -1,11 +1,14 @@
-import logo from "@/public/img/coffee-logo.png";
+import logo from "@/public/img/logo.png";
 import Image from "next/image";
 
 function Logo() {
   return (
-    <div className="text-white  flex  items-center gap-1 font-bold tracking-wider z-10  text-4xl sm:text-5xl  md:-pt-4 lg:pt-2 lg:text-5xl ">
-      Oris
-      <Image src={logo} alt="logo png" width={90} className="" />
+    <div className="z-10 text-white sm:-mt-2 lg:-mt-4 ">
+      <Image
+        src={logo}
+        alt="logo png"
+        className="object-cover w-20 scale-125 rounded-full lg:w-24 "
+      />
     </div>
   );
 }

@@ -6,7 +6,10 @@ import { useNav } from "../context/NavProvider";
 function HamburgerMenu() {
   const { toggleMenu, isOpen } = useNav();
   return (
-    <button className="text-white focus:outline-none" onClick={toggleMenu}>
+    <button
+      className="w-12 mt-6 text-white focus:outline-none"
+      onClick={toggleMenu}
+    >
       {isOpen ? <FaXmark /> : <MdMenu />}
     </button>
   );

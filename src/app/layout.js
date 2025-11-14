@@ -32,7 +32,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl" className={vazirmatnRegular.className}>
-      <body className="relative bg-coffee-gradient min-h-screen ">
+      <body className="relative flex flex-col items-center min-h-screen mx-auto bg-coffee-gradient ">
         <Header />
         {children}
       </body>
