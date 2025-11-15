@@ -7,3 +7,33 @@
     @apply text-xs sm:text-sm text-gray-500 group-hover:text-gray-800 group-hover:scale-105 transition duration-200 group-focus:outline-none group-focus:text-black group-focus:scale-105;
   }
 }
+
+/* Make scrollbar just a thin line */
+.simple-scroll::-webkit-scrollbar {
+  width: 4px; /* thin line */
+}
+
+.simple-scroll::-webkit-scrollbar-track {
+  background: transparent; /* remove background */
+}
+
+.simple-scroll::-webkit-scrollbar-thumb {
+  background: #888; /* the thin line color */
+  border-radius: 9999px;
+}
+
+/* Firefox */
+.simple-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+@media (max-width: 620px) {
+  .simple-scroll::-webkit-scrollbar {
+    display: none; /* Chrome & Safari */
+  }
+
+  .simple-scroll {
+    scrollbar-width: none; /* Firefox */
+  }
+}

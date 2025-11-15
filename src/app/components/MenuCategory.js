@@ -79,7 +79,7 @@ const Setting = [
 
 function MenuCategory() {
   return (
-    <section className="flex items-start gap-2 px-2 py-2 overflow-x-auto md:flex-col md:py-2 bg-white/40 rounded-2xl">
+    <section className="flex items-start gap-2 px-2 py-2 overflow-x-auto md:flex-col md:py-2 bg-white/40 rounded-2xl md:h-[70rem] simple-scroll">
       <CategoryItem />
       <CategoryItem />
       <CategoryItem />
