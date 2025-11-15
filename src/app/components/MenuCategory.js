@@ -1,74 +1,79 @@
 import CategoryItem from "./CategoryItem";
 
-const menu = [
+const categorys = [
+  { id: 1, categoryTitle: "نوشیدنی گرم", href: "hot-coffee" },
+  { id: 2, categoryTitle: "نوشیدنی سرد", href: "ice-coffee" },
+  { id: 3, categoryTitle: "دسر", href: "desserts" },
+];
+
+const menuItems = [
+  {
+    id: 101,
+    name: "اسپرسو",
+    price: 78,
+    tag: "hot-coffee",
+    description: "....",
+    quantity: 0,
+  },
+  {
+    id: 102,
+    name: "لاته",
+    price: 150,
+    tag: "hot-coffee",
+    description: "...",
+    quantity: 0,
+  },
+  {
+    id: 201,
+    name: "اسپرسو",
+    price: 78,
+    tag: "ice-coffee",
+    description: "...",
+    quantity: 0,
+  },
+  {
+    id: 202,
+    name: "لاته",
+    price: 150,
+    tag: "ice-coffee",
+    description: "...",
+    quantity: 0,
+  },
+
+  {
+    id: 301,
+    name: "براونی",
+    price: 135,
+    tag: "desserts",
+    description: "...",
+    quantity: 0,
+  },
+  {
+    id: 302,
+    name: "چیزکیک",
+    price: 140,
+    tag: "desserts",
+    description: "...",
+    quantity: 0,
+  },
+];
+
+const Setting = [
   {
     id: 1,
-    categoryTitle: "نوشیدنی گرم",
-    href: "hot-coffee",
-    items: [
-      {
-        id: 101,
-        name: "اسپرسو",
-        price: 78,
-        tag: "hot-coffee",
-        description: "....",
-        quantity: 0,
-      },
-      {
-        id: 102,
-        name: "لاته",
-        price: 150,
-        tag: "hot-coffee",
-        description: "...",
-        quantity: 0,
-      },
-    ],
-  },
-  {
-    id: 2,
-    categoryTitle: "نوشیدنی سرد",
-    href: "ice-coffee",
-    items: [
-      {
-        id: 201,
-        name: "اسپرسو",
-        price: 78,
-        tag: "ice-coffee",
-        description: "...",
-        quantity: 0,
-      },
-      {
-        id: 202,
-        name: "لاته",
-        price: 150,
-        tag: "ice-coffee",
-        description: "...",
-        quantity: 0,
-      },
-    ],
-  },
-  {
-    id: 3,
-    categoryTitle: "دسر",
-    href: "desserts",
-    items: [
-      {
-        id: 301,
-        name: "براونی",
-        price: 135,
-        tag: "desserts",
-        description: "...",
-        quantity: 0,
-      },
-      {
-        id: 302,
-        name: "چیزکیک",
-        price: 140,
-        tag: "desserts",
-        description: "...",
-        quantity: 0,
-      },
-    ],
+    address: "",
+    telephonNumber: 0,
+    phoneNumber: 0,
+    email: "...@gmail.com",
+    description: "",
+    openTime: "",
+    closeTime: "",
+    instageramID: "",
+    telegramID: "",
+    landingHyperText: "",
+    logo: "",
+    backgroundImageUrl: "",
+    beanCoffeeUrl: "",
   },
 ];
 
