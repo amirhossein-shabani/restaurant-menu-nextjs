@@ -2,6 +2,7 @@ import Image from "next/image";
 import bg from "@/public/img/bg.png";
 import coffeBean from "@/public/img/coffee-bean.webp";
 import Link from "next/link";
+import { getCategories } from "./_lib/data-service";
 
 function Page() {
   return (
