@@ -7,7 +7,7 @@ function Logo() {
       <Image
         src={logo}
         alt="logo png"
-        className="object-cover w-20 scale-125 rounded-full lg:w-24 "
+        className="object-cover w-20 rounded-full opacity-90 lg:w-24"
       />
     </div>
   );

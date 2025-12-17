@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function Spinner() {
   return (
     <motion.div
-      className="flex items-center justify-center h-screen w-[100vw]"
+      className="flex items-center justify-center h-screen w-[100vw]  md:w-[90vw] lg:w-[80vw] 2xl:w-[60vw]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

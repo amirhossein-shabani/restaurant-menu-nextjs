@@ -2,22 +2,21 @@ import Image from "next/image";
 import bg from "@/public/img/bg.png";
 import coffeBean from "@/public/img/coffee-bean.webp";
 import Link from "next/link";
-import { getCategories } from "./_lib/data-service";
 
 function Page() {
   return (
     <main className="relative flex flex-col items-center pt-8 sm:pt-40 scroll-smooth md:pt-32">
-      <div className="flex justify-start w-full px-2 pt-5 mx-auto text-2xl font-bold text-right text-white sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4 ">
+      <div className="z-50 flex justify-start w-full px-2 pt-5 mx-auto text-2xl font-bold text-right text-white md:z-0 sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4 ">
         <p className="">جایی که هر فنجان، تجربه‌ای متفاوت است</p>
       </div>
       <div className="flex items-center justify-center ">
-        <div className="relative z-30 max-w-lg transition-transform duration-500 ease-in-out md:max-w-xl lg:hover:scale-110">
+        <div className="relative z-30 max-w-lg transition-transform duration-500 ease-in-out md:max-w-l lg:hover:scale-[1.15]">
           <Image
             src={bg}
             alt="background picture"
             placeholder="empty"
             quality={100}
-            className="object-cover object-top "
+            className="object-cover object-top scale-100 "
           />
           <div
             className={`absolute flex items-center justify-center inset-0 top-52 lg:top-64 left-3 lg:left-4 text-3xl lg:text-3xl `}
@@ -35,7 +34,8 @@ function Page() {
         <Image
           src={coffeBean}
           quality={80}
-          className="object-bottom object-contain mx-auto  -mt-32 sm:-mt-40 md:-mt-80 lg:-mt-96 lg:max-w-6xl xl:-mt-[30rem] 2xl:-mt-[35rem] animate-riseUp delay-500 ease-in-out  "
+          className="object-bottom object-contain md:w-[90%] mx-auto -mt-28 
+           sm:-mt-36 md:-mt-[18rem] lg:-mt-[16rem] lg:max-w-6xl xl:-mt-[19rem] 2xl:-mt-[20rem] animate-riseUp delay-500 ease-in-out  "
           alt="coffe-bean "
         />
       </div>
