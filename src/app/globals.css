@@ -4,7 +4,7 @@
 
 @layer components {
   .navigation-menu-text {
-    @apply text-xs sm:text-sm text-gray-500 group-hover:text-gray-800 group-hover:scale-105 transition duration-200 group-focus:outline-none group-focus:text-black group-focus:scale-105;
+    @apply text-xs sm:text-sm text-gray-800 group-hover:text-gray-900 group-hover:scale-110 transition duration-200 group-focus:outline-none group-focus:text-black group-focus:scale-110;
   }
 }
 

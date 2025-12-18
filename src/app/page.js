@@ -6,7 +6,7 @@ import Link from "next/link";
 function Page() {
   return (
     <main className="relative flex flex-col items-center pt-8 sm:pt-40 scroll-smooth md:pt-32">
-      <div className="z-50 flex justify-start w-full px-2 pt-5 mx-auto text-2xl font-bold text-right text-white md:z-0 sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4 ">
+      <div className="flex justify-start w-full px-2 pt-5 mx-auto text-2xl font-bold text-right text-white md:z-0 sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4">
         <p className="">جایی که هر فنجان، تجربه‌ای متفاوت است</p>
       </div>
       <div className="flex items-center justify-center ">
@@ -30,12 +30,12 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="opacity-50 -z-10">
+      <div className="opacity-80 -z-10">
         <Image
           src={coffeBean}
           quality={80}
           className="object-bottom object-contain md:w-[90%] mx-auto -mt-28 
-           sm:-mt-36 md:-mt-[18rem] lg:-mt-[16rem] lg:max-w-6xl xl:-mt-[19rem] 2xl:-mt-[20rem] animate-riseUp delay-500 ease-in-out  "
+           sm:-mt-36 md:-mt-[18rem] lg:-mt-[16rem] lg:max-w-6xl xl:-mt-[19rem] 2xl:-mt-[20rem] animate-riseUp delay-300 ease-in-out  "
           alt="coffe-bean "
         />
       </div>

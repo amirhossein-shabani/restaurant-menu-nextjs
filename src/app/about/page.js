@@ -6,7 +6,7 @@ import { MdEmail, MdPhoneAndroid } from "react-icons/md";
 function Page() {
   return (
     <div className="flex justify-center max-w-6xl px-4 pt-5 pb-10 mx-auto sm:pt-40 2xl:px-0">
-      <div className="flex flex-col flex-1 px-6 pt-4 pb-10 mx-3 text-white shadow-xl bg-yellow-300/20 rounded-2xl lg:rounded-none lg:rounded-r-2xl lg:w-1/2 xl:gap-4 lg:mx-0 lg:flex-none">
+      <div className="flex flex-col flex-1 px-6 pt-4 pb-10 mx-3 text-white shadow-xl bg-[#270400]/40 rounded-2xl lg:rounded-none lg:rounded-r-2xl lg:w-1/2 xl:gap-4 lg:mx-0 lg:flex-none">
         {/* Address  */}
         <div className="flex flex-col gap-2 py-4 xl:gap-4 items-start-center">
           <p className="text-lg font-semibold xl:text-3xl">آدرس ما :</p>
@@ -16,7 +16,7 @@ function Page() {
         </div>
         {/* contact with admin */}
         <div
-          className="flex flex-col gap-2 px-3 py-4 bg-gray-300/30 rounded-xl xl:text-xl "
+          className="flex flex-col gap-2 px-3 py-4 bg-black/10 rounded-xl xl:text-xl "
           dir="ltr"
         >
           <p className="px-2 " dir="rtl">

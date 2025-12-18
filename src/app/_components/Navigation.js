@@ -19,12 +19,12 @@ function Navigation() {
       >
         منو
       </Link>
-      <Link
+      {/* <Link
         href="/account"
         className="px-4 py-2 transition-all duration-200 rounded-full hover:bg-white hover:text-slate-600 focus:bg-white focus:text-slate-600 focus:ring-0 focus:outline-none"
       >
         حساب کاربر
-      </Link>
+      </Link> */}
       <Link
         href="/about"
         className="px-4 py-2 transition-all duration-200 rounded-full hover:bg-white hover:text-slate-600 focus:bg-white focus:text-slate-600 focus:ring-0 focus:outline-none"

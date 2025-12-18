@@ -39,7 +39,7 @@ async function MenuItemsContainer() {
   return (
     <section
       dir="rtl"
-      className="grid col-span-2 w-full h-[54vh] md:h-[80vh] gap-2 p-2 overflow-y-scroll bg-white/30 rounded-2xl   scrollbar-thin simple-scroll scroll-smooth"
+      className="grid col-span-2 w-full h-[54vh] md:h-[80vh] gap-2 p-2 overflow-y-scroll bg-black/20 rounded-2xl   scrollbar-thin simple-scroll scroll-smooth"
     >
       {Object.entries(grouped).map(([tag, items]) => {
         const lookupKey = String(tag || "").toLowerCase();
@@ -47,7 +47,7 @@ async function MenuItemsContainer() {
         const title = cat?.categoryTitle || cat?.title || cat?.name || tag;
         return (
           <div key={tag} className="w-full" id={tag}>
-            <h2 className="pr-2 mt-2 mb-4 text-xl font-extrabold text-gray-800/90">
+            <h2 className="pr-2 mt-2 mb-4 text-xl font-semibold text-gray-100">
               {title}
             </h2>
             <div className="grid gap-2 mb-8 gird-col md:grid-cols-2">
