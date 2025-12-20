@@ -5,8 +5,6 @@ async function MenuItemsContainer() {
   const menuItems = await getMenuItems();
   const categories = await getCategories();
 
-  console.log(categories);
-
   // build a lookup map for categories (normalize keys, include `href`)
   const categoryMap = (categories || []).reduce((acc, c) => {
     const possibleKeys = [
@@ -30,7 +28,6 @@ async function MenuItemsContainer() {
   // group items by tag
   const grouped = menuItems.reduce((acc, item) => {
     const t = item.tag || "سایر";
-    console.log(t);
     if (!acc[t]) acc[t] = [];
     acc[t].push(item);
     return acc;
@@ -47,10 +44,10 @@ async function MenuItemsContainer() {
         const title = cat?.categoryTitle || cat?.title || cat?.name || tag;
         return (
           <div key={tag} className="w-full" id={tag}>
-            <h2 className="pr-2 mt-2 mb-4 text-xl font-semibold text-gray-100">
+            <h2 className="pr-2 my-4 text-xl font-semibold text-gray-100 myt-2">
               {title}
             </h2>
-            <div className="grid gap-2 mb-8 gird-col md:grid-cols-2">
+            <div className="grid gap-2 mb-2 gird-col md:grid-cols-2">
               {items.map((item) => (
                 <MenuItem key={item.id} item={item} />
               ))}

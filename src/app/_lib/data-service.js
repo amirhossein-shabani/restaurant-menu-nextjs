@@ -11,7 +11,19 @@ export async function getCategories() {
     throw new Error("Failed to load categories");
   }
 
-  return data;
+  const categories = await Promise.all(
+    data.map(async (category) => {
+      const imgPath = category.imgUrl;
+      if (!imgPath) return category;
+
+      if (typeof imgPath === "string" && imgPath.startsWith("http")) {
+        return { ...category, imgUrl: imgPath };
+      }
+      return category;
+    })
+  );
+
+  return categories;
 }
 
 export async function getMenuItems() {
@@ -23,6 +35,21 @@ export async function getMenuItems() {
   if (error) {
     console.log("getMenuItems error : ", error);
     throw new Error("Failed to load menu itmes");
+  }
+
+  return data;
+}
+
+export async function getSetting() {
+  const { data, error } = await supabase
+    .from("setting")
+    .select("*")
+    .eq("id", 1)
+    .single();
+
+  if (error) {
+    console.log("getSetting error:", error);
+    throw new Error("Failed to load setting");
   }
 
   return data;

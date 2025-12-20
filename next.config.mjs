@@ -8,6 +8,11 @@ const nextConfig = {
         port: "",
         pathname: "/storage/v1/object/sign/categorie-images/**",
       },
+      {
+        protocol: "https",
+        hostname: "flhcfdglalmwmfxnyvhz.supabase.co",
+        pathname: "/storage/v1/object/sign/setting/**",
+      },
     ],
   },
   /* config options here */

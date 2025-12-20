@@ -2,12 +2,15 @@ import Image from "next/image";
 import bg from "@/public/img/bg.png";
 import coffeBean from "@/public/img/coffee-bean.webp";
 import Link from "next/link";
+import { getSetting } from "./_lib/data-service";
 
-function Page() {
+async function Page() {
+  const { landingHyperText } = await getSetting();
+
   return (
     <main className="relative flex flex-col items-center pt-8 sm:pt-40 scroll-smooth md:pt-32">
       <div className="flex justify-start w-full px-2 pt-5 mx-auto text-2xl font-bold text-right text-white md:z-0 sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4">
-        <p className="">جایی که هر فنجان، تجربه‌ای متفاوت است</p>
+        <p className="">{landingHyperText}</p>
       </div>
       <div className="flex items-center justify-center ">
         <div className="relative z-30 max-w-lg transition-transform duration-500 ease-in-out md:max-w-l lg:hover:scale-[1.15]">
@@ -19,7 +22,7 @@ function Page() {
             className="object-cover object-top scale-100 "
           />
           <div
-            className={`absolute flex items-center justify-center inset-0 top-52 lg:top-64 left-3 lg:left-4 text-3xl lg:text-3xl `}
+            className={`absolute flex items-center justify-center inset-0 top-52 lg:top-64 left-6 lg:left-8 text-2xl lg:text-4xl `}
           >
             <Link
               href="/menu"

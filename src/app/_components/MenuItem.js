@@ -18,6 +18,7 @@ function MenuItem({ item }) {
           {price}
         </div>
       </div>
+      {/*  this is have to be image not the div and the imgUrl have to be in the src property not in the element by as chlidren*/}
       <div className="w-1/2 h-full px-2 rounded-lg bg-black/40">{imgUrl}</div>
     </div>
   );

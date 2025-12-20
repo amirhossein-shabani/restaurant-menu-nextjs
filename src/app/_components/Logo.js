@@ -1,13 +1,18 @@
 import logo from "@/public/img/logo.png";
 import Image from "next/image";
+import { getSetting } from "../_lib/data-service";
 
-function Logo() {
+async function Logo() {
+  const { logoUrl } = await getSetting();
+
   return (
-    <div className="z-10 text-white sm:-mt-2 lg:-mt-4 ">
+    <div className="relative z-10 w-20 h-20 text-white rounded-full max-w-24 aspect-auto sm:-mt-2 lg:-mt-4 ">
       <Image
-        src={logo}
+        src={logoUrl}
+        fill
+        quality={100}
         alt="logo png"
-        className="object-cover w-20 rounded-full opacity-90 lg:w-24"
+        className="object-cover rounded-full "
       />
     </div>
   );
