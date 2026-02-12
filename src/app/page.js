@@ -38,7 +38,7 @@ async function Page() {
           src={coffeBean}
           quality={80}
           className="object-bottom object-contain md:w-[90%] mx-auto -mt-28 
-           sm:-mt-36 md:-mt-[18rem] lg:-mt-[16rem] lg:max-w-6xl xl:-mt-[19rem] 2xl:-mt-[20rem] animate-riseUp delay-300 ease-in-out  "
+           sm:-mt-36 md:-mt-[18rem] lg:-mt-[16rem] lg:max-w-6xl xl:-mt-[19rem] 2xl:-mt-[20rem] animate-riseUp delay-500 ease-in-out  "
           alt="coffe-bean "
         />
       </div>
