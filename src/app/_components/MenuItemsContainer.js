@@ -1,5 +1,6 @@
 import { getCategories, getMenuItems } from "../_lib/data-service";
 import MenuItem from "./MenuItem";
+import MenuItemTrigger from "./MenuItemTrigger";
 
 async function MenuItemsContainer() {
   const menuItems = await getMenuItems();
@@ -49,7 +50,9 @@ async function MenuItemsContainer() {
             </h2>
             <div className="grid gap-2 mb-2 gird-col md:grid-cols-2">
               {items.map((item) => (
-                <MenuItem key={item.id} item={item} />
+                <MenuItemTrigger key={item.id} item={item}>
+                  <MenuItem item={item} />
+                </MenuItemTrigger>
               ))}
             </div>
           </div>
