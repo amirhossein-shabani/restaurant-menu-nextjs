@@ -29,7 +29,7 @@ function MenuItem({ item }) {
           src={imgUrl || itemBackupImg}
           alt="item-img"
           quality={100}
-          className="object-contain scale-75 rounded-xl"
+          className="object-contain scale-[.8] rounded-xl"
         />
       </div>
     </div>

@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: "flhcfdglalmwmfxnyvhz.supabase.co",
         pathname: "/storage/v1/object/sign/setting/**",
       },
+      {
+        protocol: "https",
+        hostname: "flhcfdglalmwmfxnyvhz.supabase.co",
+        pathname: "/storage/v1/object/sign/items-images/**",
+      },
     ],
   },
   /* config options here */

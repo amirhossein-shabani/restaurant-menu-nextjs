@@ -6,10 +6,12 @@ function MenuItemDetails({ item }) {
     <div dir="rtl" className="flex flex-row h-full ">
       <div className="flex flex-col justify-between w-1/2 px-2 py-2 pl-4">
         <div>
-          <h2 className="mb-4 text-2xl font-bold text-white">{item.name}</h2>
-          <p className="text-gray-300">{item.description}</p>
+          <h2 className="mb-4 text-xl font-bold text-white lg:text-2xl">
+            {item.name}
+          </h2>
+          <p className="text-gray-200">{item.description}</p>
         </div>
-        <p className="self-end mt-4 text-lg text-yellow-400">
+        <p className="self-end mt-4 text-xl font-bold text-yellow-400 ">
           {item.price} تومان
         </p>
       </div>

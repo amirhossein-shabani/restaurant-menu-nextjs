@@ -9,7 +9,7 @@ async function Page() {
 
   return (
     <main className="relative flex flex-col items-center pt-8 sm:pt-40 scroll-smooth md:pt-32">
-      <div className="flex justify-start w-full px-2 pt-5 mx-auto text-2xl font-bold text-right text-white md:z-0 sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4">
+      <div className="flex justify-center w-full px-2 pt-2 mx-auto text-xl font-bold text-right text-white md:z-0 sm:max-w-4xl lg:max-w-5xl xl:max-w-6xl md:pt-10 sm:text-3xl md:text-4xl lg:text-5xl lg:px-4">
         <p className="">{landingHyperText}</p>
       </div>
       <div className="flex items-center justify-center ">
