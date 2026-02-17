@@ -22,10 +22,13 @@ export default function Modal({ isOpen, onClose, children }) {
       onClick={onClose}
     >
       <div
-        className="relative w-[90%] max-w-lg bg-neutral-900 p-6 rounded-2xl"
+        className="relative h-1/3 w-[90%] max-w-lg px-4 py-3 lg:scale-125 bg-black/80 rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <button onClick={onClose} className="absolute text-white top-3 left-3">
+        <button
+          onClick={onClose}
+          className="absolute px-2.5 pt-2 text-xl font-bold text-white rounded-full -top-12 left-0.5 bg-black/60 hover:scale-105 transition hover:text-orange-600 "
+        >
           ✕
         </button>
 

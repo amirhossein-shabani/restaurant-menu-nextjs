@@ -1,3 +1,6 @@
+import itemBackupImg from "@/public/img/itemBackupImg.png";
+import Image from "next/image";
+
 function MenuItem({ item }) {
   const { name, price, description, imgUrl } = item;
   // in-work from here
@@ -18,8 +21,17 @@ function MenuItem({ item }) {
           {price}
         </div>
       </div>
-      {/*  this is have to be image not the div and the imgUrl have to be in the src property not in the element by as chlidren*/}
-      <div className="w-1/2 h-full px-2 rounded-lg bg-black/40">{imgUrl}</div>
+
+      <div className="relative flex self-center w-1/2 h-full bg-black/25 rounded-xl aspect-square">
+        <Image
+          fill
+          // loader="./public/img/logo.png"
+          src={imgUrl || itemBackupImg}
+          alt="item-img"
+          quality={100}
+          className="object-contain scale-75 rounded-xl"
+        />
+      </div>
     </div>
   );
 }
