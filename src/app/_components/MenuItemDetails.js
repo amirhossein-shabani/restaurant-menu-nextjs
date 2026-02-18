@@ -6,7 +6,7 @@ function MenuItemDetails({ item }) {
     <div dir="rtl" className="flex flex-row h-full ">
       <div className="flex flex-col justify-between w-1/2 px-2 py-2 pl-4">
         <div>
-          <h2 className="mb-4 text-xl font-bold text-white lg:text-2xl">
+          <h2 className="mb-4 text-xl font-medium text-white md:text-2xl md:font-bold ">
             {item.name}
           </h2>
           <p className="text-gray-200">{item.description}</p>
@@ -22,7 +22,7 @@ function MenuItemDetails({ item }) {
           src={item.imgUrl || itemBackupImg}
           alt="item-img"
           quality={100}
-          className="object-contain rounded-xl"
+          className="object-cover rounded-xl"
         />
       </div>
     </div>
