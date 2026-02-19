@@ -5,7 +5,7 @@ function MenuItem({ item }) {
   const { name, price, description, imgUrl } = item;
   // in-work from here
   return (
-    <div className="flex justify-center w-full px-2 py-2 text-gray-100 bg-black/30 h-60 rounded-xl ">
+    <div className="flex justify-center w-full px-2 py-2 text-gray-100 bg-black/30 h-60 rounded-xl hover:scale-[1.02] transition duration-100 ">
       <div className="flex flex-col justify-between w-1/2 gap-2 px-1 py-2 ">
         <div className="flex flex-col gap-2">
           <div
@@ -15,7 +15,9 @@ function MenuItem({ item }) {
           >
             {name}
           </div>
-          {description && <div className="text-sm">({description})</div>}
+          {description && (
+            <div className="text-sm text-white/60">({description})</div>
+          )}
         </div>
         <div className="flex justify-end px-2 text-lg font-bold text-yellow-300/90">
           {price}

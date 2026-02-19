@@ -18,16 +18,16 @@ export default function Modal({ isOpen, onClose, children }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 "
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 "
       onClick={onClose}
     >
       <div
-        className="relative h-1/3 md:h-[50%] w-[90%] max-w-lg p-2 lg:scale-125  rounded-2xl bg-[#AB7F52]/70"
+        className="relative h-1/3 md:h-[50%] w-[90%] max-w-lg p-2 lg:scale-125  rounded-2xl bg-[#AB7F52]/90"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute px-2.5 pt-2 text-xl font-bold text-white rounded-full -top-12 left-0.5 bg-[#AB7F52]/70 hover:scale-105 transition hover:text-black "
+          className="absolute px-2.5 pt-2 text-xl font-bold text-white rounded-full -top-12 left-0.5 bg-[#AB7F52]/90 hover:scale-105 transition hover:text-black "
         >
           ✕
         </button>

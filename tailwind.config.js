@@ -19,7 +19,7 @@ module.exports = {
       },
 
       animation: {
-        riseUp: "riseUp .9s ease-out forwards ",
+        riseUp: "riseUp .7s ease-out forwards ",
       },
     },
   },

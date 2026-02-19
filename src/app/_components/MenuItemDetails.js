@@ -6,7 +6,9 @@ function MenuItemDetails({ item }) {
     <div dir="rtl" className="flex flex-row h-full ">
       <div className="flex flex-col justify-between w-1/2 px-2 py-2 pl-4">
         <div>
-          <h2 className="mb-4 text-xl font-medium text-white md:text-2xl md:font-bold ">
+          <h2
+            className={`mb-4 pb-4 text-xl font-medium text-white md:text-2xl md:font-bold ${item.description && "border-b border-white "} `}
+          >
             {item.name}
           </h2>
           <p className="text-gray-200">{item.description}</p>
@@ -15,14 +17,14 @@ function MenuItemDetails({ item }) {
           {item.price} تومان
         </p>
       </div>
-      <div className="relative w-1/2 rounded-xl aspect-square">
+      <div className="relative w-1/2 rounded-xl aspect-square hover:scale-[1.01] transition duration-100">
         <Image
           fill
           // loader="./public/img/logo.png"
           src={item.imgUrl || itemBackupImg}
           alt="item-img"
           quality={100}
-          className="object-cover rounded-xl"
+          className="object-cover rounded-xl "
         />
       </div>
     </div>

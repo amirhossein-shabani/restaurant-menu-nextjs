@@ -37,12 +37,12 @@ async function Page() {
         <Image
           src={coffeBean}
           quality={80}
-          className="object-bottom object-contain md:w-[70%] mx-auto sm:w-[80%] -mt-28 sm:-mt-40 md:-mt-[15rem] lg:-mt-[16rem] lg:max-w-4xl xl:-mt-[16rem] 2xl:-mt-[16rem]   animate-riseUp delay-500 ease-in-out  "
+          className="object-bottom object-contain md:w-[70%] mx-auto sm:w-[80%] -mt-28 sm:-mt-40 md:-mt-[15rem] lg:-mt-[16rem] lg:max-w-4xl xl:-mt-[16rem] 2xl:-mt-[16rem] animate-riseUp "
           alt="coffe-bean "
         />
       </div>
-      <div className="flex items-center justify-center w-full pl-6 text-sm text-gray-700 sm:-mt-10 md:-mt-16 ">
-        <p className="py-2"> ساعت سرویس دهی 08:00 صبح تا 24:00 شب</p>
+      <div className=" fixed bottom-0 flex items-center justify-center w-full pl-6 text-sm font-bold text-black/60 bg-[#AB7F52]/40">
+        <p className="py-3"> سرویس دهی 08:00 الی 24:00 </p>
       </div>
     </main>
   );

@@ -122,3 +122,5 @@ export default Page;
 // add the about text in the center
 
 // and if you want or have time add the map for the coffee shop location
+
+// size of this page is not correct and user can see hole about page in one place and this is not correct .
