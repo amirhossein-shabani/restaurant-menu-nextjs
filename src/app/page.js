@@ -5,7 +5,12 @@ import Link from "next/link";
 import { getSetting } from "./_lib/data-service";
 
 async function Page() {
-  const { landingHyperText } = await getSetting();
+  const { landingHyperText, openTime, closeTime } = await getSetting();
+
+  const formattedOpenTime = openTime?.slice(0, 5);
+  const fomrattedCloseTime = closeTime?.slice(0, 5);
+
+  console.log(formattedOpenTime, fomrattedCloseTime);
 
   return (
     <main className="relative flex flex-col items-center pt-8 sm:pt-32 scroll-smooth md:pt-24">
@@ -42,7 +47,10 @@ async function Page() {
         />
       </div>
       <div className=" fixed bottom-0 flex items-center justify-center w-full pl-6 text-sm font-bold text-black/60 bg-[#AB7F52]/40">
-        <p className="py-3"> سرویس دهی 08:00 الی 24:00 </p>
+        <p className="py-3">
+          {" "}
+          سرویس دهی {formattedOpenTime} الی {fomrattedCloseTime}{" "}
+        </p>
       </div>
     </main>
   );
