@@ -11,13 +11,15 @@ function CategoryItem({ category }) {
         <div
           className={`relative flex items-center justify-center w-full aspect-square md:w-[90px] scale-[1.75] mb-1  ${href === "protein-drink" && "scale-150"}`}
         >
-          <Image
-            src={imgUrl}
-            fill
-            alt={categoryTitle}
-            className={`flex items-start justify-start object-contain rounded-lg opacity-85 ${href === "extras" && "mb-0 mt-2 "} `}
-            quality={100}
-          />
+          {imgUrl && (
+            <Image
+              src={imgUrl}
+              fill
+              alt={categoryTitle}
+              className={`flex items-start justify-start object-contain rounded-lg opacity-85 ${href === "extras" && "mb-0 mt-2 "} `}
+              quality={100}
+            />
+          )}
         </div>
 
         {/* TITLE */}

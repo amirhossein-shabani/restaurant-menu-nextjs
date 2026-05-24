@@ -4,7 +4,7 @@ export async function getCategories() {
   const { data, error } = await supabase
     .from("categories")
     .select("*")
-    .order("id");
+    .order("display_order", { ascending: true });
 
   if (error) {
     console.log("getCategories error :", error);
@@ -14,27 +14,28 @@ export async function getCategories() {
   const categories = await Promise.all(
     data.map(async (category) => {
       const imgPath = category.imgUrl;
+
       if (!imgPath) return category;
 
       if (typeof imgPath === "string" && imgPath.startsWith("http")) {
         return { ...category, imgUrl: imgPath };
       }
+
       return category;
-    })
+    }),
   );
 
   return categories;
 }
-
 export async function getMenuItems() {
   const { data, error } = await supabase
     .from("menuItems")
     .select("*")
-    .order("id");
+    .order("display_order", { ascending: true });
 
   if (error) {
     console.log("getMenuItems error : ", error);
-    throw new Error("Failed to load menu itmes");
+    throw new Error("Failed to load menu items");
   }
 
   return data;

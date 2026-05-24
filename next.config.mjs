@@ -6,7 +6,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "flhcfdglalmwmfxnyvhz.supabase.co",
         port: "",
-        pathname: "/storage/v1/object/sign/categorie-images/**",
+        pathname: "/storage/v1/object/public/categorie-images/**",
       },
       {
         protocol: "https",
@@ -16,7 +16,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "flhcfdglalmwmfxnyvhz.supabase.co",
-        pathname: "/storage/v1/object/sign/items-images/**",
+        pathname: "/storage/v1/object/public/items-images/**",
       },
     ],
   },
