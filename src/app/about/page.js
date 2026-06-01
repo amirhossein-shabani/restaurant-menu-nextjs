@@ -28,16 +28,23 @@ async function Page() {
             <span>
               <FaPhone />
             </span>
-            <a href="tel:+989368569768" className="hover:underline ">
-              -- ---------
+            <a
+              href={`tel:0${setting.telephonNumber}`}
+              className="hover:underline "
+            >
+              0{setting.telephonNumber}
             </a>
           </div>
+
           <div className="flex flex-row gap-2">
             <span>
               <MdPhoneAndroid />
             </span>
 
-            <a href="tel:+989368569768" className="hover:underline ">
+            <a
+              href={`tel:0${setting.phoneNumber}`}
+              className="hover:underline "
+            >
               0{setting.phoneNumber}
             </a>
           </div>
@@ -46,27 +53,10 @@ async function Page() {
             <span>
               <MdEmail />
             </span>
-            <a href="mailto:amseinn20@gmail.com" className="hover:underline ">
+            <a href={`mailto:${setting.email}`} className="hover:underline ">
               {setting.email}
             </a>
           </div>
-
-          {/* instageram id : */}
-          {/* <a
-          href="mailto:amseinn20@gmail.com"
-          dir="ltr"
-          className="hover:underline "
-        >
-          amseinn20@gmail.com
-        </a> */}
-          {/* telegram id : */}
-          {/* <a
-          href="mailto:amseinn20@gmail.com"
-          dir="ltr"
-          className="hover:underline "
-        >
-          amseinn20@gmail.com
-        </a> */}
         </div>
 
         {/* map for location */}
