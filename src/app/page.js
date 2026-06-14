@@ -1,9 +1,6 @@
-import Image from "next/image";
-import bg from "@/public/img/bg.png";
-import coffeBean from "@/public/img/coffee-bean.webp";
-import Link from "next/link";
 import { getSetting, getCategories } from "./_lib/data-service";
 import ScrollSections from "./_components/Scrollsection";
+import HeroAnimation from "./_components/HeroAnimation"; // ← جدید
 
 async function Page() {
   const { landingHyperText, openTime, closeTime } = await getSetting();
@@ -15,44 +12,13 @@ async function Page() {
   return (
     <main className="relative flex flex-col items-center w-screen pt-8 overflow-hidden sm:pt-32 scroll-smooth md:pt-24">
       <div className="flex justify-center w-full px-2 pt-2 mx-auto text-xl font-bold text-right text-white md:z-0 sm:max-w-2xl lg:max-w-4xl xl:max-w-6xl md:pt-10 sm:text-2xl md:text-3xl lg:text-4xl lg:px-4">
-        <p className="">{landingHyperText}</p>
+        <p>{landingHyperText}</p>
       </div>
-      <div className="flex items-center justify-center ">
-        <div className="relative z-30 max-w-lg transition-transform duration-500 ease-in-out md:max-w-sm lg:hover:scale-[1.15] sm:max-w-xs">
-          <Image
-            src={bg}
-            alt="background picture"
-            placeholder="empty"
-            quality={100}
-            className="object-cover object-top scale-100 "
-          />
-          <div
-            className={`absolute flex items-center justify-center inset-0 top-52 lg:top-64 left-6 lg:left-8 text-2xl sm:text-base md:text-xl `}
-          >
-            <Link
-              href="/menu"
-              className="px-10 py-1 font-medium text-white transition duration-200 border-4 border-white rounded-full bg-white/30 lg:bg-transparent sm:px-10 md:px-8 lg:hover:text-gray-700 lg:hover:bg-white lg:hover:outline-none"
-            >
-              منوی کافه
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className="opacity-80 -z-10">
-        <Image
-          src={coffeBean}
-          quality={80}
-          className="object-bottom object-contain md:w-[70%] mx-auto sm:w-[80%] -mt-28 sm:-mt-40 md:-mt-[15rem] lg:-mt-[16rem] lg:max-w-4xl xl:-mt-[16rem] 2xl:-mt-[16rem] animate-riseUp "
-          alt="coffe-bean "
-        />
-      </div>
-
+      <HeroAnimation /> {/* ← جایگزین دو div قبلی */}
       <ScrollSections categories={categories} />
-
-      <div className=" fixed bottom-0 flex items-center justify-center w-full pl-6 text-sm font-bold text-black/60 bg-[#AB7F52]/40">
+      <div className="fixed bottom-0 flex items-center justify-center w-full pl-6 text-sm font-bold text-black/60 bg-[#AB7F52]/40">
         <p className="py-3">
-          {" "}
-          سرویس دهی {formattedOpenTime} الی {fomrattedCloseTime}{" "}
+          سرویس دهی {formattedOpenTime} الی {fomrattedCloseTime}
         </p>
       </div>
     </main>
@@ -60,5 +26,3 @@ async function Page() {
 }
 
 export default Page;
-
-// for know this is enough but the position of the div in this landing page not currect and in the diffrent size may broke or not seeing well and for that i have to change this page another time so well .

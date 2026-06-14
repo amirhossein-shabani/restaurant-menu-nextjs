@@ -170,17 +170,19 @@ function CategoryBox({ index, category }) {
         onClick={handleCategoryClick}
         className="w-full max-w-sm  min-h-[72px] rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm px-4 flex items-center gap-3 cursor-pointer hover:bg-white/10 transition-colors"
       >
-        {category?.imgUrl && (
-          <div className="relative flex-shrink-0 w-32 h-32 overflow-hidden rounded-lg">
-            <Image
-              src={category.imgUrl}
-              alt={category.categoryTitle}
-              fill
-              className="object-cover"
-            />
-          </div>
-        )}
-        <p className="flex-1 text-sm font-semibold text-center text-white">
+        <div className="relative flex-shrink-0 w-32 h-32 overflow-hidden rounded-lg">
+          <Image
+            src={
+              category.landingImageUrl
+                ? category?.landingImageUrl
+                : category?.imgUrl
+            }
+            alt={category.categoryTitle}
+            fill
+            className="object-cover"
+          />
+        </div>
+        <p className="flex-1 text-xl font-semibold text-center text-white">
           {category?.categoryTitle || "عنوان دسته‌بندی"}
         </p>
       </button>
@@ -293,7 +295,7 @@ export default function ScrollSections({ categories = [] }) {
       <ScrollIndicator />
 
       {/* Section 1 — category boxes */}
-      <section className="relative w-full max-w-xl px-4 mx-auto mt-24 mb-16 overflow-hidden">
+      <section className="relative w-full max-w-3xl px-4 mx-auto mt-24 mb-16 overflow-hidden">
         <SectionTitle>دسته‌بندی</SectionTitle>
         <div className="flex flex-col gap-4">
           {categories.map((category, i) => (
