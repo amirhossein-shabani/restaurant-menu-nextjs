@@ -41,6 +41,21 @@ export async function getMenuItems() {
   return data;
 }
 
+export async function getSuggestedItems() {
+  const { data, error } = await supabase
+    .from("menuItems")
+    .select("*")
+    .eq("suggested", true)
+    .limit(6);
+
+  if (error) {
+    console.log("getSuggestedItems error: ", error);
+    throw new Error("Failed to load suggested items");
+  }
+
+  return data;
+}
+
 export async function getSetting() {
   const { data, error } = await supabase
     .from("setting")

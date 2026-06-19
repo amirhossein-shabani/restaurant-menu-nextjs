@@ -1,4 +1,3 @@
-import logo from "@/public/img/logo.png";
 import Image from "next/image";
 import { getSetting } from "../_lib/data-service";
 

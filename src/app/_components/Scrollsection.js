@@ -10,8 +10,10 @@ import {
   useTransform,
   AnimatePresence,
 } from "framer-motion";
+import itemBackupImg from "@/public/img/itemBackupImg.png";
 
 // ─── تعداد باکس‌ها رو اینجا تنظیم کن ──────────────────────────────────────
+// توجه: تعداد واقعی از دیتابیس میآید (حداکثر 6)
 const FEATURE_BOXES = 6; // section 2 — گرید
 
 // ─── Scroll indicator ──────────────────────────────────────────────────────
@@ -22,7 +24,7 @@ function ScrollIndicator() {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col items-center gap-2 mt-6 pointer-events-none select-none"
+      className="flex flex-col items-center gap-2 pointer-events-none select-none sm:-mt-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
@@ -191,7 +193,7 @@ function CategoryBox({ index, category }) {
 }
 
 // ─── Feature box (گرید) ────────────────────────────────────────────────────
-function FeatureBox({ index }) {
+function FeatureBox({ index, item }) {
   const ref = useRef(null);
   const col = index % 3;
 
@@ -234,6 +236,8 @@ function FeatureBox({ index }) {
     },
   };
 
+  if (!item) return null;
+
   return (
     <motion.div
       ref={ref}
@@ -241,8 +245,31 @@ function FeatureBox({ index }) {
       animate={inView ? "visible" : "exit"}
       variants={variants}
     >
-      {/* ← اینجا محتوای خودتو بذار */}
-      <div className="min-h-[140px] rounded-2xl border border-black/10 bg-black/5 backdrop-blur-sm" />
+      <div className="flex flex-col overflow-hidden transition-colors duration-300 border rounded-2xl border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 h-80">
+        <div className="relative flex-shrink-0 w-full h-48 overflow-hidden">
+          <Image
+            src={item.imgUrl || itemBackupImg}
+            alt={item.name}
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="flex flex-col justify-between flex-1 gap-2 p-4">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-700">{item.name}</h3>
+            {item.description && (
+              <p className="mt-1 text-sm text-gray-600 line-clamp-2">
+                {item.description}
+              </p>
+            )}
+          </div>
+          <div className="flex items-center justify-end w-full">
+            <span className="text-xl font-bold text-gray-700">
+              {item.price}
+            </span>
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 }
@@ -289,7 +316,10 @@ function Divider() {
 }
 
 // ─── Main export ───────────────────────────────────────────────────────────
-export default function ScrollSections({ categories = [] }) {
+export default function ScrollSections({
+  categories = [],
+  suggestedItems = [],
+}) {
   return (
     <>
       <ScrollIndicator />
@@ -308,10 +338,10 @@ export default function ScrollSections({ categories = [] }) {
 
       {/* Section 2 — Item  boxes */}
       <section className="relative w-full max-w-4xl px-4 mx-auto mt-8 mb-40">
-        <SectionTitle> ایتم های کافه </SectionTitle>
+        <SectionTitle> پیشنهاد های ما </SectionTitle>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {Array.from({ length: FEATURE_BOXES }).map((_, i) => (
-            <FeatureBox key={i} index={i} />
+          {suggestedItems.map((item, i) => (
+            <FeatureBox key={item.id} index={i} item={item} />
           ))}
         </div>
       </section>

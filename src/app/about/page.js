@@ -3,12 +3,14 @@ import about from "@/public/img/about.png";
 import { FaInstagram, FaPhone, FaTelegram } from "react-icons/fa6";
 import { MdEmail, MdPhoneAndroid } from "react-icons/md";
 import { getSetting } from "../_lib/data-service";
+import AboutVideoBg from "../_components/AboutVideoBg";
 
 async function Page() {
   const setting = await getSetting();
 
   return (
-    <div className="flex justify-center max-w-6xl px-4 pt-5 pb-10 mx-auto sm:pt-40 2xl:px-0">
+    <div className="relative flex justify-center max-w-6xl px-4 pt-5 pb-10 mx-auto sm:pt-40 2xl:px-0">
+      <AboutVideoBg url={setting.bgVideoUrl} /> {/* ← اضافه کن */}
       <div className="flex flex-col flex-1 px-6 pt-4 pb-10 mx-3 text-white shadow-xl bg-[#270400]/40 rounded-2xl lg:rounded-none lg:rounded-r-2xl lg:w-1/2 xl:gap-4 lg:mx-0 lg:flex-none">
         {/* Address  */}
         <div className="flex flex-col gap-2 py-4 xl:gap-4 items-start-center">
@@ -89,7 +91,6 @@ async function Page() {
           </a>
         </div>
       </div>
-
       {/* picture section in About  */}
       <div className="hidden shadow-xl lg:flex opacity-90 rounded-l-2xl">
         <Image

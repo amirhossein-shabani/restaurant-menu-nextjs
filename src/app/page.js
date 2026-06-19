@@ -1,10 +1,15 @@
-import { getSetting, getCategories } from "./_lib/data-service";
+import {
+  getSetting,
+  getCategories,
+  getSuggestedItems,
+} from "./_lib/data-service";
 import ScrollSections from "./_components/Scrollsection";
 import HeroAnimation from "./_components/HeroAnimation"; // ← جدید
 
 async function Page() {
   const { landingHyperText, openTime, closeTime } = await getSetting();
   const categories = await getCategories();
+  const suggestedItems = await getSuggestedItems();
 
   const formattedOpenTime = openTime?.slice(0, 5);
   const fomrattedCloseTime = closeTime?.slice(0, 5);
@@ -15,7 +20,7 @@ async function Page() {
         <p>{landingHyperText}</p>
       </div>
       <HeroAnimation /> {/* ← جایگزین دو div قبلی */}
-      <ScrollSections categories={categories} />
+      <ScrollSections categories={categories} suggestedItems={suggestedItems} />
       <div className="fixed bottom-0 flex items-center justify-center w-full pl-6 text-sm font-bold text-black/60 bg-[#AB7F52]/40">
         <p className="py-3">
           سرویس دهی {formattedOpenTime} الی {fomrattedCloseTime}
