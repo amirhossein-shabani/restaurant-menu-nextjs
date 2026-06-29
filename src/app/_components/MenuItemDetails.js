@@ -3,29 +3,29 @@ import itemBackupImg from "@/public/img/itemBackupImg.png";
 
 function MenuItemDetails({ item }) {
   return (
-    <div dir="rtl" className="flex flex-row h-full ">
-      <div className="flex flex-col justify-between w-1/2 px-2 py-2 pl-4">
-        <div>
-          <h2
-            className={`mb-4 pb-4 text-xl font-medium text-white md:text-2xl md:font-bold ${item.description && "border-b border-white "} `}
-          >
-            {item.name}
-          </h2>
-          <p className="text-gray-200">{item.description}</p>
-        </div>
-        <p className="self-end mt-4 text-xl font-bold text-yellow-400 ">
-          {item.price} تومان
-        </p>
-      </div>
-      <div className="relative w-1/2 rounded-xl aspect-square hover:scale-[1.01] transition duration-100">
+    <div className="flex flex-col overflow-hidden transition-colors duration-300 md:flex-row-reverse rounded-2xl backdrop-blur-sm hover:bg-white/10">
+      <div className="relative flex-shrink-0 w-full h-64 overflow-hidden border-b md:w-1/2 md:h-80 border-white/10">
         <Image
-          fill
-          // loader="./public/img/logo.png"
           src={item.imgUrl || itemBackupImg}
-          alt="item-img"
-          quality={100}
-          className="object-cover rounded-xl "
+          alt={item.name}
+          fill
+          className="object-cover"
         />
+      </div>
+      <div className="flex flex-col justify-between flex-1 gap-2 p-4">
+        <div>
+          <h3 className="pb-2 text-2xl font-medium text-white">{item.name}</h3>
+          {item.description && (
+            <p className="pb-4 mt-1 font-sans text-lg font-thin text-white/90 line-clamp-2">
+              {item.description}
+            </p>
+          )}
+        </div>
+        <div className="flex items-center justify-end w-full">
+          <span className="text-2xl font-bold text-yellow-400">
+            {item.price}
+          </span>
+        </div>
       </div>
     </div>
   );

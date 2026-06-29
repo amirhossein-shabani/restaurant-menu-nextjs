@@ -159,11 +159,9 @@ function CategoryBox({ index, category }) {
   return (
     <motion.div
       ref={ref}
-      className="overflow-hidden"
-      style={{
-        display: "flex",
-        justifyContent: isLeft ? "flex-start" : "flex-end",
-      }}
+      className={`overflow-hidden flex justify-center ${
+        isLeft ? "md:justify-start" : "md:justify-end"
+      }`}
       initial="hidden"
       animate={inView ? "visible" : "exit"}
       variants={variants}
