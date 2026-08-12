@@ -39,7 +39,7 @@ export default function HeroAnimation({ backgroundImageUrl }) {
         <Image
           src={coffeBean}
           quality={80}
-          className="object-bottom object-contain w-[80%] md:w-[70%] mx-auto -mt-[10.5rem] md:-mt-[15rem] lg:-mt-[16rem] lg:max-w-4xl xl:-mt-[16rem] 2xl:-mt-[16rem] opacity-90"
+          className="object-bottom object-contain w-[80%] md:w-[70%] mx-auto -mt-[10.5rem] md:-mt-[15rem] lg:-mt-[16rem] lg:max-w-4xl xl:-mt-[16rem] 2xl:-mt-[16rem] opacity-[0.89] "
           alt="coffee-bean"
         />
       </motion.div>
