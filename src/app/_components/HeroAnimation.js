@@ -17,8 +17,11 @@ export default function HeroAnimation({ backgroundImageUrl }) {
           className="relative z-30 max-w-lg md:max-w-sm sm:max-w-xs lg:hover:scale-[1.15] transition-transform duration-700 ease-out"
         >
           <Image
-            src={backgroundImageUrl}
+            src={backgroundImageUrl || coffeBean}
             alt="background picture"
+            width={900}
+            height={1200}
+            priority
             placeholder="empty"
             quality={100}
             className="object-cover object-top w-full"
