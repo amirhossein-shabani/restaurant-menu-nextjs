@@ -4,7 +4,9 @@ import {
   getSuggestedItems,
 } from "./_lib/data-service";
 import ScrollSections from "./_components/Scrollsection";
-import HeroAnimation from "./_components/HeroAnimation"; // ← جدید
+import HeroAnimation from "./_components/HeroAnimation";
+
+export const dynamic = "force-dynamic";
 
 async function Page() {
   const { landingHyperText, openTime, closeTime } = await getSetting();

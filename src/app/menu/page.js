@@ -5,6 +5,8 @@ import Spinner from "../_components/Spinner";
 import ScrollToHash from "../_components/ScrollToHash";
 import { ModalProvider } from "../_components/ModalContext";
 
+export const dynamic = "force-dynamic";
+
 function Page() {
   return (
     <ModalProvider>

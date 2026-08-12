@@ -5,6 +5,8 @@ import { MdEmail, MdPhoneAndroid } from "react-icons/md";
 import { getSetting } from "../_lib/data-service";
 import AboutVideoBg from "../_components/AboutVideoBg";
 
+export const dynamic = "force-dynamic";
+
 async function Page() {
   const setting = await getSetting();
 
