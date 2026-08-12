@@ -13,7 +13,7 @@ function Header() {
 
       {/* hamburger menu */}
       <NavProvider>
-        <div className="absolute z-20 text-white top-7 right-5 sm:hidden">
+        <div className="absolute z-20 text-white top-5 right-5 sm:hidden">
           <HamburgerMenu />
         </div>
         <NavigationMenu />
