@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import bg from "@/public/img/bg.png";
 import coffeBean from "@/public/img/coffee-bean.webp";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function HeroAnimation() {
+export default function HeroAnimation({ backgroundImageUrl }) {
   return (
     <>
       {/* عکس اصلی + دکمه */}
@@ -18,7 +17,7 @@ export default function HeroAnimation() {
           className="relative z-30 max-w-lg md:max-w-sm sm:max-w-xs lg:hover:scale-[1.15] transition-transform duration-700 ease-out"
         >
           <Image
-            src={bg}
+            src={backgroundImageUrl}
             alt="background picture"
             placeholder="empty"
             quality={100}
