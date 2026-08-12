@@ -7,8 +7,6 @@ import ScrollSections from "./_components/Scrollsection";
 import HeroAnimation from "./_components/HeroAnimation"; // ← جدید
 
 async function Page() {
-  console.log("🔥 HOME PAGE RENDER:", new Date().toISOString());
-
   const { landingHyperText, openTime, closeTime } = await getSetting();
   const categories = await getCategories();
   const suggestedItems = await getSuggestedItems();
