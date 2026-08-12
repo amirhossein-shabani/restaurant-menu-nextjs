@@ -9,7 +9,7 @@ export default function HeroAnimation({ backgroundImageUrl }) {
   return (
     <>
       {/* عکس اصلی + دکمه */}
-      <div className="flex items-center justify-center w-full scale-[85%] sm:scale-100">
+      <div className="flex items-center justify-center w-full -mt-8 md:-mt-0 scale-[85%] sm:scale-100">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export default function HeroAnimation({ backgroundImageUrl }) {
         <Image
           src={coffeBean}
           quality={80}
-          className="object-bottom object-contain w-[80%] md:w-[70%] mx-auto -mt-36 sm:-mt-40 md:-mt-[15rem] lg:-mt-[16rem] lg:max-w-4xl xl:-mt-[16rem] 2xl:-mt-[16rem]"
+          className="object-bottom object-contain w-[85%] md:w-[70%] mx-auto -mt-[11.8rem] md:-mt-[15rem] lg:-mt-[16rem] lg:max-w-4xl xl:-mt-[16rem] 2xl:-mt-[16rem]"
           alt="coffee-bean"
         />
       </motion.div>
