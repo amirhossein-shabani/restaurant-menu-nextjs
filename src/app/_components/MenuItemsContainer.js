@@ -6,9 +6,6 @@ async function MenuItemsContainer() {
   const menuItems = await getMenuItems();
   const categories = await getCategories();
 
-  console.log(menuItems);
-  console.log(categories);
-
   return (
     <section
       dir="rtl"

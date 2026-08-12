@@ -105,13 +105,3 @@ async function Page() {
 }
 
 export default Page;
-
-// i have to fixed the font size in the diffrent screen size and add the coffeeshop photo on the left side in large screen .
-
-// add the social media in the bottom of the box
-
-// add the about text in the center
-
-// and if you want or have time add the map for the coffee shop location
-
-// size of this page is not correct and user can see hole about page in one place and this is not correct .
