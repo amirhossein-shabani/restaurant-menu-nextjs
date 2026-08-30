@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import coffeBean from "@/public/img/coffee-bean.webp";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function HeroAnimation({ backgroundImageUrl }) {
+export default function HeroAnimation({ images }) {
+  const [backgroundImageUrl, beanCoffeeUrl] = images;
+
   return (
     <>
       {/* عکس اصلی + دکمه */}
@@ -17,7 +17,7 @@ export default function HeroAnimation({ backgroundImageUrl }) {
           className="relative z-30 max-w-lg md:max-w-sm sm:max-w-xs lg:hover:scale-[1.15] transition-transform duration-700 ease-out"
         >
           <Image
-            src={backgroundImageUrl || coffeBean}
+            src={backgroundImageUrl}
             alt="background picture"
             width={900}
             height={1200}
@@ -37,7 +37,11 @@ export default function HeroAnimation({ backgroundImageUrl }) {
         className="-z-10 "
       >
         <Image
-          src={coffeBean}
+          src={beanCoffeeUrl}
+          width={900}
+          height={1200}
+          priority
+          placeholder="empty"
           quality={80}
           className="object-bottom object-contain w-[80%] md:w-[70%] mx-auto -mt-[10.5rem] md:-mt-[15rem] lg:-mt-[16rem] lg:max-w-4xl xl:-mt-[16rem] 2xl:-mt-[16rem] opacity-[0.89] "
           alt="coffee-bean"
