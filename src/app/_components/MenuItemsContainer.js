@@ -9,7 +9,7 @@ async function MenuItemsContainer() {
   return (
     <section
       dir="rtl"
-      className="grid col-span-2 w-full max-h-[72vh] gap-3 p-3 overflow-y-auto bg-black/20 rounded-2xl scrollbar-thin simple-scroll scroll-smooth overflow-x-hidden"
+      className="grid col-span-2 w-full max-h-[32rem] md:max-h-[72vh] gap-3 p-3 overflow-y-auto bg-black/20 rounded-2xl scrollbar-thin simple-scroll scroll-smooth overflow-x-hidden"
     >
       {categories.map((category) => {
         // فقط آیتم‌های همین category
