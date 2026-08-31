@@ -10,7 +10,7 @@ export default function ScrollToHash() {
 
       if (hash) {
         let attempts = 0;
-        const maxAttempts = 15;
+        const maxAttempts = 20;
 
         const tryScroll = () => {
           const element = document.getElementById(hash);
