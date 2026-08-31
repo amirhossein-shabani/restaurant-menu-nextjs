@@ -13,7 +13,7 @@ function MenuItem({ item }) {
       {/* Sold out overlay */}
       {!is_available && (
         <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none bg-black/10">
-          <span className="px-3 py-2 text-sm font-bold text-white rounded-md bg-red-700/80">
+          <span className="px-4 py-2 text-sm text-white rounded-md bg-red-700/80">
             تمام شده
           </span>
         </div>
