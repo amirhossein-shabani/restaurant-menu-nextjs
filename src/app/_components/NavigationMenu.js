@@ -22,7 +22,7 @@ function NavigationMenu() {
 
       <div
         className={`absolute flex items-center gap-x-2 sm:gap-x-4 bg-white/70 z-20 inset-x-16 py-3 text-2xl  rounded-full px-6  justify-around transition-transform duration-300 ease-linear text-gray-800  ${
-          isOpen ? "translate-y-2 shadow-yellow-200" : "-translate-y-80"
+          isOpen ? "translate-y-0 shadow-yellow-200" : "-translate-y-80"
         }`}
       >
         <Link

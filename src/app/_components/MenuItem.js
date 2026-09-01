@@ -6,23 +6,14 @@ function MenuItem({ item }) {
 
   return (
     <div
-      className={`relative w-full flex items-start gap-3 px-2 py-2 bg-black/15 rounded-md overflow-hidden min-h-[72px] transition duration-150 ${
-        is_available ? "hover:scale-[1.02]" : "border border-red-600/50"
+      className={`relative w-full flex items-start gap-3 px-1.5 py-1.5 rounded-[0.5rem] overflow-hidden min-h-[72px] transition duration-150 ${
+        is_available ? "bg-black/15 hover:scale-[1.01]" : "bg-black/20"
       }`}
     >
-      {/* Sold out overlay */}
-      {!is_available && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none bg-black/10">
-          <span className="px-4 py-2 text-sm text-white rounded-md bg-red-700/80">
-            تمام شده
-          </span>
-        </div>
-      )}
-
       {/* Image */}
       <div
-        className={`relative flex-shrink-0 w-24 h-24 overflow-hidden bg-gray-800 rounded-md md:w-28 md:h-28 ${
-          !is_available && "opacity-50"
+        className={`relative flex-shrink-0 w-24 h-24 overflow-hidden rounded-md bg-gray-800 md:w-28 md:h-28 ${
+          !is_available && "grayscale"
         }`}
       >
         <Image
@@ -33,33 +24,49 @@ function MenuItem({ item }) {
           className="object-cover"
         />
 
-        {/* Subtle dark overlay */}
+        {/* Sold out overlay */}
         {!is_available && (
-          <div className="absolute inset-0 pointer-events-none bg-black/20" />
+          <>
+            <div className="absolute inset-0 bg-black/35" />
+
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="px-2.5 py-1 text-[11px] font-medium text-white/90 border border-white/30 rounded-full bg-black/40 backdrop-blur-[2px]">
+                تمام شده
+              </span>
+            </div>
+          </>
         )}
       </div>
 
       {/* Content */}
-      <div className={`flex-1 min-w-0 pt-0.5 ${!is_available && "opacity-70"}`}>
-        <div className="flex items-center justify-between gap-3">
-          <h4 className="text-base font-medium text-white truncate sm:text-base">
-            {name}
-          </h4>
-        </div>
+      <div className="flex-1 min-w-0 pt-0.5">
+        {/* Name */}
+        <h4
+          className={`text-base font-medium truncate ${
+            is_available ? "text-white" : "text-white/75"
+          }`}
+        >
+          {name}
+        </h4>
 
+        {/* Description */}
         {description && (
-          <p className="mt-1 text-xs text-white/70 sm:text-sm line-clamp-2">
+          <p
+            className={`mt-1 text-xs sm:text-sm line-clamp-2 ${
+              is_available ? "text-white/70" : "text-white/45"
+            }`}
+          >
             {description}
           </p>
         )}
 
         {/* Price */}
         <div
-          className={`absolute pt-3 pb-0 text-sm font-bold left-2 bottom-1 text-end whitespace-nowrap ${
-            is_available ? "text-yellow-400" : "text-yellow-400/60"
+          className={`flex  flex-row-reverse absolute left-2 pt-1 px-2 rounded-md bottom-2  whitespace-nowrap text-sm font-bold border border-yellow-400/20 bg-yellow-400/10  ${
+            is_available ? "text-yellow-400" : "text-yellow-400/40"
           }`}
         >
-          {price}
+          <span>{price}</span> <span className="pl-1 text-[10px] ">T</span>
         </div>
       </div>
     </div>
