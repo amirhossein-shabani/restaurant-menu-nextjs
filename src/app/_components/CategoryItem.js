@@ -4,8 +4,6 @@ import Image from "next/image";
 function CategoryItem({ category }) {
   const { categoryTitle, href, imgUrl, landingImageUrl } = category;
 
-  console.log(category);
-
   return (
     <a href={"#" + href} className="w-full ">
       <div className="flex flex-col flex-none w-[120px] h-[160px] sm:w-[140px] sm:h-[180px] md:w-full md:h-[96px] pt-3 md:px-2 md:py-3 text-center text-white md:flex-row bg-black/20 rounded-xl hover:scale-[1.02] transition duration-150">

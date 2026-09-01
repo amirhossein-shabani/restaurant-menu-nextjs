@@ -6,15 +6,13 @@ export default function ScrollToHash() {
   useEffect(() => {
     const scrollToHash = () => {
       const hash = window.location.hash.slice(1); // حذف #
-      console.log("Scrolling to hash:", hash);
 
       if (hash) {
         let attempts = 0;
-        const maxAttempts = 20;
+        const maxAttempts = 25;
 
         const tryScroll = () => {
           const element = document.getElementById(hash);
-          console.log("Attempt", attempts, "- Element found:", !!element);
 
           if (element) {
             // روش 1: scrollIntoView

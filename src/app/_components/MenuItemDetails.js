@@ -5,7 +5,7 @@ function MenuItemDetails({ item }) {
   return (
     <div
       dir="rtl"
-      className="w-full max-w-xl mx-auto overflow-hidden border shadow-2xl rounded-2xl border-white/10 bg-zinc-950/90 shadow-black/40 backdrop-blur-xl"
+      className="w-full max-w-xl mx-auto overflow-hidden border shadow-2xl rounded-2xl border-[#E5C89E]/30 bg-[#270400]/90 shadow-black/20 backdrop-blur-xl"
     >
       {/* Image */}
       <div className="relative w-full aspect-[4/3] overflow-hidden">

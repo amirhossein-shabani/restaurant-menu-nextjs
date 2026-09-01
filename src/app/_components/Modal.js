@@ -18,7 +18,7 @@ export default function Modal({ isOpen, onClose, children }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 "
+      className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-[2px] bg-black/40 "
       onClick={onClose}
     >
       <div
@@ -27,7 +27,7 @@ export default function Modal({ isOpen, onClose, children }) {
       >
         <button
           onClick={onClose}
-          className="absolute px-2 pt-1 text-xl font-bold text-white/90 bg-black/40 rounded-full -top-12 left-0.5  hover:scale-105 transition hover:text-white border border-white/20 "
+          className="absolute px-2 pt-1 text-xl font-bold text-[#E5C89E]/90 bg-black/40 rounded-full -top-12 left-0.5  hover:scale-105 transition hover:text-[#E5C89E] border border-[#E5C89E]/20 "
         >
           ✕
         </button>
